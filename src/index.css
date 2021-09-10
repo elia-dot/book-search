@@ -21,6 +21,9 @@
   padding: 1em 2em;
   align-items: center;
 }
+.input-box {
+  max-width: 90%;
+}
 
 .input-box input {
   border: none;
