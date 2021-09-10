@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Cards from './components/Cards';
+import Footer from './components/Footer';
 import SearchBar from './components/SearchBar';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           </div>
         </div>
       )}
+      <Footer/>
     </div>
   );
 }
