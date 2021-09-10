@@ -29,7 +29,7 @@ const SearchBar = ({
   const handleChange = (e) => {
     setSearchTerm(e.target.value);
     if (e.target.value === '') setSuggestion('');
-    else {
+    else if (e.target.value.length >= 2) {
       findSuggestion();
     }
   };
