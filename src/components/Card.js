@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {BsBook} from 'react-icons/bs'
 
 import useWidth from '../utils/useWidth';
 
@@ -16,7 +17,7 @@ const Card = ({
         style={{
           backgroundImage: `url(${imageLinks ? imageLinks.thumbnail : ''})`,
         }}
-      ></div>
+      > {!imageLinks && <BsBook/>}</div>
       <div className="card-description">
         <h4>{title}</h4>
         {width > 600 ? (
