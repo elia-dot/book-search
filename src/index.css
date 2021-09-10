@@ -1,15 +1,139 @@
-body {
+/* global */
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #282c34;
-  color: white;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  width: 80%;
+  margin: 2em auto;
+}
+
+/* search bar */
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ccebff;
+  padding: 1em 2em;
+  align-items: center;
+}
+
+.input-box input {
+  border: none;
+  font-size: 1.2em;
+  padding: 0.4em 0.8em;
+}
+
+.input-box input:focus {
+  outline: none;
+  border: 1px #0099ff solid;
+}
+
+form {
+  display: flex;
+}
+
+.search-btn {
+  cursor: pointer;
+  font-size: 1.2em;
+  border: none;
+  padding: 0.4em 0.6em;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  color: #0099ff;
+  transition: 0.3s;
+}
+
+.search-btn:hover {
+  background: #0099ff;
+  color: #fff;
+}
+
+/* cards */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  gap: 2em;
+  place-content: center;
+  padding: 2em;
+}
+
+.card {
+  display: flex;
+  box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.48);
+}
+
+.card-image {
+  height: 300px;
+  min-width: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-right: 1px solid rgb(151, 151, 151);
+}
+
+.card-description {
+  padding: 2em 2em;
+  max-height: 300px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+}
+
+.card-description h4 {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.show-description {
+  color: #0099ff;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 1em;
+  }
+
+  .search-container h1 {
+    display: none;
+  }
+
+  .search-container {
+    justify-content: center;
+  }
+
+  .card {
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .cards-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-image {
+    height: 350px;
+    background-position: center;
+    border-right: none;
+    border-bottom: 1px solid rgb(151, 151, 151);
+  }
+
+  .card-description {
+    display: block;
+    max-height: unset;
+  }
+
+  .book-description {
+    margin-bottom: 1em;
+  }
 }
